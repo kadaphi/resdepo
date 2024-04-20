@@ -105,12 +105,14 @@ bot.hears("TRX",async ctx => {
         }
         try {
            await ctx.telegram.sendMessage(admin,`
-    ✅ NEW DEPOSIT RECEIVED 
+      🎊 𝐍𝐄𝐖 𝐃𝐄𝐏𝐎𝐒𝐈𝐓 𝐑𝐄𝐂𝐄𝐈𝐕𝐄𝐃 🎊 
 
-    🗣 User: ${name}
-    🆔 User_Id: ${user_id}
-    💵 Amount: ${amount} ${currency}
-    🔗 TXID: <a href="https://tronscan.org/#/transaction/${txid}">${txid}</a>
+🤠 𝐔𝐬𝐞𝐫: ${name}
+🆔 𝐔𝐬𝐞𝐫 𝐈𝐃: ${user_id}
+💵 𝐀𝐦𝐨𝐮𝐧𝐭: ${amount} ${currency}
+⚙️ 𝐓𝐗𝐈𝐃: <a href="https://tronscan.org/#/transaction/${txid}">${txid}</a>
+           
+🤖 𝐁𝐨𝐭: @SaveRestrictedPosts_Bot
            `,{
                  parse_mode: "HTML",
                  disable_web_page_preview: true
@@ -147,22 +149,24 @@ bot.hears("USDT",async ctx => {
       ctx.reply("Wrong Coin Generated, Please Try Again");
       return;
     }
-    if (amount < 60 || amount > 2000){
+    if (amount < 2 || amount > 100){
       ctx.reply("Amount is Either less or High than required "+amount+" USDT");
       return;
     }
     try {
        await ctx.telegram.sendMessage(admin,`
-✅ NEW DEPOSIT RECEIVED 
+🎊 𝐍𝐄𝐖 𝐃𝐄𝐏𝐎𝐒𝐈𝐓 𝐑𝐄𝐂𝐄𝐈𝐕𝐄𝐃 🎊 
 
-🗣 User: ${name}
-🆔 User_Id: ${user_id}
-💵 Amount: ${amount} ${currency}
-🔗 TXID: <a href="https://tronscan.org/#/transaction/${txid}">${txid}</a>
-       `,{
-             parse_mode: "HTML",
-             disable_web_page_preview: true
-       });
+🤠 𝐔𝐬𝐞𝐫: ${name}
+🆔 𝐔𝐬𝐞𝐫 𝐈𝐃: ${user_id}
+💵 𝐀𝐦𝐨𝐮𝐧𝐭: ${amount} ${currency}
+⚙️ 𝐓𝐗𝐈𝐃: <a href="https://tronscan.org/#/transaction/${txid}">${txid}</a>
+           
+🤖 𝐁𝐨𝐭: @SaveRestrictedPosts_Bot
+           `,{
+                 parse_mode: "HTML",
+                 disable_web_page_preview: true
+           });
     } catch (error) {
        ctx.reply("An error occured: "+ error.message);
     }
@@ -190,22 +194,24 @@ bot.hears("BTC",async ctx => {
     const data = result.data.data[0];
     const txid = data.hash;
     const amount = data.output_total/100000000;
-    if (amount < 0.00000001 || amount > 1){
+    if (amount < 0.000031 || amount > 0.0017){
       ctx.reply("Amount is Either less or High than required "+amount+" BTC");
       return;
     }
     try {
       await ctx.telegram.sendMessage(admin,`
-✅ NEW DEPOSIT RECEIVED 
+🎊 𝐍𝐄𝐖 𝐃𝐄𝐏𝐎𝐒𝐈𝐓 𝐑𝐄𝐂𝐄𝐈𝐕𝐄𝐃 🎊 
 
-🗣 User: ${name}
-🆔 User_Id: ${user_id}
-💵 Amount: ${amount} BTC
-🔗 TXID: <a href="https://blockchair.com/bitcoin/transaction/${txid}">${txid}</a>
-       `,{
-             parse_mode: "HTML",
-             disable_web_page_preview: true
-       });
+🤠 𝐔𝐬𝐞𝐫: ${name}
+🆔 𝐔𝐬𝐞𝐫 𝐈𝐃: ${user_id}
+💵 𝐀𝐦𝐨𝐮𝐧𝐭: ${amount} ${currency}
+⚙️ 𝐓𝐗𝐈𝐃: <a href="https://blockchair.com/bitcoin/transaction/${txid}">${txid}</a>
+           
+🤖 𝐁𝐨𝐭: @SaveRestrictedPosts_Bot
+           `,{
+                 parse_mode: "HTML",
+                 disable_web_page_preview: true
+           });
     } catch (error) {
        ctx.reply("An error occured: "+ error.message);
     }
@@ -233,22 +239,24 @@ bot.hears("BNB",async ctx => {
     const data = result.data
     const txid = data.hash;
     const amount = data.value;
-    if (amount < 0.00000001 || amount > 10){
+    if (amount < 0.0035 || amount > 0.18){
       ctx.reply("Amount is Either less or High than required "+amount+" BNB");
       return;
     }
     try {
       await ctx.telegram.sendMessage(admin,`
-✅ NEW DEPOSIT RECEIVED 
+🎊 𝐍𝐄𝐖 𝐃𝐄𝐏𝐎𝐒𝐈𝐓 𝐑𝐄𝐂𝐄𝐈𝐕𝐄𝐃 🎊 
 
-🗣 User: ${name}
-🆔 User_Id: ${user_id}
-💵 Amount: ${amount} BNB
-🔗 TXID: <a href="https://bscscan.com/tx/${txid}">${txid}</a>
-       `,{
-             parse_mode: "HTML",
-             disable_web_page_preview: true
-       });
+🤠 𝐔𝐬𝐞𝐫: ${name}
+🆔 𝐔𝐬𝐞𝐫 𝐈𝐃: ${user_id}
+💵 𝐀𝐦𝐨𝐮𝐧𝐭: ${amount} ${currency}
+⚙️ 𝐓𝐗𝐈𝐃: <a href="https://bscscan.com/tx/${txid}">${txid}</a>
+           
+🤖 𝐁𝐨𝐭: @SaveRestrictedPosts_Bot
+           `,{
+                 parse_mode: "HTML",
+                 disable_web_page_preview: true
+           });
     } catch (error) {
        ctx.reply("An error occured: "+ error.message);
     }
@@ -276,22 +284,24 @@ bot.hears("ETH",async ctx => {
     const data = result.data
     const txid = data.hash;
     const amount = data.value;
-    if (amount < 0.00000001 || amount > 10){
+    if (amount < 0.00063 || amount > 0.032){
       ctx.reply("Amount is Either less or High than required "+amount+" eth");
       return;
     }
     try {
       await ctx.telegram.sendMessage(admin,`
-✅ NEW DEPOSIT RECEIVED 
+🎊 𝐍𝐄𝐖 𝐃𝐄𝐏𝐎𝐒𝐈𝐓 𝐑𝐄𝐂𝐄𝐈𝐕𝐄𝐃 🎊 
 
-🗣 User: ${name}
-🆔 User_Id: ${user_id}
-💵 Amount: ${amount} ETH
-🔗 TXID: <a href="https://etherscan.io/tx/${txid}">${txid}</a>
-       `,{
-             parse_mode: "HTML",
-             disable_web_page_preview: true
-       });
+🤠 𝐔𝐬𝐞𝐫: ${name}
+🆔 𝐔𝐬𝐞𝐫 𝐈𝐃: ${user_id}
+💵 𝐀𝐦𝐨𝐮𝐧𝐭: ${amount} ${currency}
+⚙️ 𝐓𝐗𝐈𝐃: <a href="https://etherscan.io/tx/${txid}">${txid}</a>
+           
+🤖 𝐁𝐨𝐭: @SaveRestrictedPosts_Bot
+           `,{
+                 parse_mode: "HTML",
+                 disable_web_page_preview: true
+           });
     } catch (error) {
        ctx.reply("An error occured: "+ error.message);
     }
@@ -395,7 +405,3 @@ app.get("/bnb",async (req,res) => {
     }
 });
 bot.launch();
-const port = 300;
-app.listen(port, () => {
-  console.log("Running on port: "+ port);
-});
