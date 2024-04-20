@@ -2,7 +2,7 @@ const { Telegraf } = require("telegraf");
 const axios = require("axios");
 const app = require("express")();
 const { Web3 } = require('web3');
-const bot = new Telegraf('7063201045:AAHfotXA20B9GVtbTVeGDvsC2_sXoCHLDmkcx');
+const bot = new Telegraf('7063201045:AAHfotXA20B9GVtbTVeGDvsC2_sXoCHLDmk');
 let admin;//6354552851
 admin = "@forexfactorypayout";
 const url = "http://62.72.24.208:300";
