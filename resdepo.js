@@ -2,15 +2,15 @@ const { Telegraf } = require("telegraf");
 const axios = require("axios");
 const app = require("express")();
 const { Web3 } = require('web3');
-const bot = new Telegraf('6601104327:AAE78jk6bgpE0BuTkoqVae1Jw6JFMf05wWg');
+const bot = new Telegraf('7063201045:AAHfotXA20B9GVtbTVeGDvsC2_sXoCHLDmkcx');
 let admin;//6354552851
 admin = "@forexfactorypayout";
 const url = "http://62.72.24.208:300";
-const btc_time = 2000000 //1000 = 1 secs
-const trx_time = 10000 //1000 = 1 secs
-const usdt_time= 300000 //1000 = 1 secs
-const eth_time = 25000 //1000 = 1 secs
-const bnb_time = 17000 //1000 = 1 secs
+const btc_time = 1800000 //1000 = 1 secs
+const trx_time = 780000 //1000 = 1 secs
+const usdt_time= 1080000 //1000 = 1 secs
+const eth_time = 1500000 //1000 = 1 secs
+const bnb_time = 1260000 //1000 = 1 secs
 
 
 
@@ -99,7 +99,7 @@ bot.hears("TRX",async ctx => {
           ctx.reply("Wrong Coin Generated, Please Try Again")
           return;
         }
-        if (amount < 1 || amount > 10000){
+        if (amount < 19 || amount > 902){
           ctx.reply("Amount is Either less or High than required "+amount+" TRX");
           return;
         }
